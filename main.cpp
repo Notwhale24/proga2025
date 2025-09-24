@@ -13,94 +13,94 @@ int main() {
     double x_r1, y_r1, s1;
     double x_r2, y_r2, s2;
 
-    cout << "Enter point coordinates (x y): ";
+    cout << "Введите координаты точки (x y): ";
     cin >> x_p >> y_p;
     point.set_point(x_p, y_p);
 
-    cout << "Enter the center of the first circle (x y): ";
+    cout << "Введите центр первой окружности (x y): ";
     cin >> x_c1 >> y_c1;
-    cout << "Enter the radius of the first circle: ";
+    cout << "Введите радиус первой окружности: ";
     cin >> r1;
     circle1.set_circle(x_c1, y_c1, r1);
 
-    cout << "Enter the center of the second circle (x y): ";
+    cout << "Введите центр второй окружности (x y): ";
     cin >> x_c2 >> y_c2;
-    cout << "Enter the radius of the second circle: ";
+    cout << "Введите радиус второй окружности: ";
     cin >> r2;
     circle2.set_circle(x_c2, y_c2, r2);
 
-    cout << "Enter the top-left corner of the first square (x y): ";
+    cout << "Введите левый верхний угол первого квадрата (x y): ";
     cin >> x_r1 >> y_r1;
-    cout << "Enter the side length of the first square: ";
+    cout << "Введите длину стороны первого квадрата: ";
     cin >> s1;
     rectangle1.set_rectangle(x_r1, y_r1, s1);
 
-    cout << "Enter the top-left corner of the second square (x y): ";
+    cout << "Введите левый верхний угол второго квадрата (x y): ";
     cin >> x_r2 >> y_r2;
-    cout << "Enter the side length of the second square: ";
+    cout << "Введите длину стороны второго квадрата: ";
     cin >> s2;
     rectangle2.set_rectangle(x_r2, y_r2, s2);
 
     cout << endl;
 
     if (point_in_circle(point, circle1))
-        cout << "Point is inside Circle1\n";
+        cout << "Точка находится внутри Окружности1\n";
     else
-        cout << "Point is NOT inside Circle1\n";
+        cout << "Точка НЕ находится внутри Окружности1\n";
 
     if (point_in_rectangle(point, rectangle1))
-        cout << "Point is inside Square1\n";
+        cout << "Точка находится внутри Квадрата1\n";
     else
-        cout << "Point is NOT inside Square1\n";
+        cout << "Точка НЕ находится внутри Квадрата1\n";
 
     if (point_on_circle(point, circle1))
-        cout << "Point is on the boundary of Circle1\n";
+        cout << "Точка находится на границе Окружности1\n";
     else
-        cout << "Point is NOT on the boundary of Circle1\n";
+        cout << "Точка НЕ находится на границе Окружности1\n";
 
     if (point_on_rectangle(point, rectangle1))
-        cout << "Point is on the boundary of Square1\n";
+        cout << "Точка находится на границе Квадрата1\n";
     else
-        cout << "Point is NOT on the boundary of Square1\n";
+        cout << "Точка НЕ находится на границе Квадрата1\n";
 
     cout << endl;
 
     if (circles_intersect(circle1, circle2))
-        cout << "Circle1 and Circle2 intersect\n";
+        cout << "Окружность1 и Окружность2 пересекаются\n";
     else
-        cout << "Circle1 and Circle2 do NOT intersect\n";
+        cout << "Окружность1 и Окружность2 НЕ пересекаются\n";
 
     if (rectangles_intersect(rectangle1, rectangle2))
-        cout << "Square1 and Square2 intersect\n";
+        cout << "Квадрат1 и Квадрат2 пересекаются\n";
     else
-        cout << "Square1 and Square2 do NOT intersect\n";
+        cout << "Квадрат1 и Квадрат2 НЕ пересекаются\n";
 
     if (circle_rectangle_intersect(circle1, rectangle1))
-        cout << "Circle1 and Square1 intersect\n";
+        cout << "Окружность1 и Квадрат1 пересекаются\n";
     else
-        cout << "Circle1 and Square1 do NOT intersect\n";
+        cout << "Окружность1 и Квадрат1 НЕ пересекаются\n";
 
     cout << endl;
 
     if (circle_in_circle(circle1, circle2))
-        cout << "Circle1 is inside Circle2\n";
+        cout << "Окружность1 находится внутри Окружности2\n";
     else
-        cout << "Circle1 is NOT inside Circle2\n";
+        cout << "Окружность1 НЕ находится внутри Окружности2\n";
 
     if (rectangle_in_rectangle(rectangle1, rectangle2))
-        cout << "Square1 is inside Square2\n";
+        cout << "Квадрат1 находится внутри Квадрата2\n";
     else
-        cout << "Square1 is NOT inside Square2\n";
+        cout << "Квадрат1 НЕ находится внутри Квадрата2\n";
 
     if (rectangle_in_circle(rectangle1, circle1))
-        cout << "Square1 is inside Circle1\n";
+        cout << "Квадрат1 находится внутри Окружности1\n";
     else
-        cout << "Square1 is NOT inside Circle1\n";
+        cout << "Квадрат1 НЕ находится внутри Окружности1\n";
 
     if (circle_in_rectangle(circle1, rectangle1))
-        cout << "Circle1 is inside Square1\n";
+        cout << "Окружность1 находится внутри Квадрата1\n";
     else
-        cout << "Circle1 is NOT inside Square1\n";
+        cout << "Окружность1 НЕ находится внутри Квадрата1\n";
 
     return 0;
 }
